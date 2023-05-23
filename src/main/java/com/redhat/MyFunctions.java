@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 public class MyFunctions {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MyFunctions.class);
-    @Funq("FunqyHttp")
+    @Funq("FunqyHttpTrigger")
     public String fun(FunqyInput input) {
 
         LOGGER.info("received: {}", input);
