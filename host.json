@@ -1,0 +1,8 @@
+{
+  "version": "2.0",
+  "customHandler": {
+    "description": {
+      "defaultExecutablePath": "/work/application/funqy-azure-example-runner"
+    }
+  }
+}
