@@ -48,7 +48,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>${project.artifactId}</finalName>
     <plugins>
       <plugin>
         <groupId>${quarkus.platform.group-id}</groupId>
@@ -99,6 +98,25 @@
                 <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                 <maven.home>${maven.home}</maven.home>
               </systemPropertyVariables>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- Assemby plugin for creating zip files -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <appendAssemblyId>false</appendAssemblyId>
+              <descriptors>
+                <descriptor>src/main/assembly/assembly.xml</descriptor>
+              </descriptors>
             </configuration>
           </execution>
         </executions>
