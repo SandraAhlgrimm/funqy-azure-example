@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: function-zip
-          path: /target/funqy-azure-example.zip
+          path: target/funqy-azure-example.zip
 
       - name: Azure Login
         uses: azure/login@v1
