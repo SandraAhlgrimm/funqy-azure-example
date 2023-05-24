@@ -32,7 +32,7 @@ resource "azurerm_service_plan" "main" {
   resource_group_name = azurerm_resource_group.main.name
 
   sku_name = "Y1"
-  os_type  = "Windows"
+  os_type  = "Linux"
 }
 
 resource "azurerm_linux_function_app" "main" {
