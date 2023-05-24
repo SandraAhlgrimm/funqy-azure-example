@@ -2,7 +2,7 @@
   "version": "2.0",
   "httpWorker": {
     "description": {
-      "defaultExecutablePath": "/home/site/wwwroot/funqy-azure-example-runner"
+      "defaultExecutablePath": "/home/site/wwwroot/funqy-azure-example"
     },
     "enableForwardingHttpRequest" : "true"
   }
