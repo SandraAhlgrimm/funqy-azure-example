@@ -9,14 +9,14 @@ on:
     branches: [ main ]
 
 env:
-  AZURE_FUNCTIONAPP_NAME: funqyhttptrigger      # set this to your function app name on Azure
+  AZURE_FUNCTIONAPP_NAME: funqy-azure-example-runner      # set this to your function app name on Azure
   POM_XML_DIRECTORY: '.'                     # set this to the directory which contains pom.xml file
   POM_FUNCTIONAPP_NAME: funqy-azure-example        # set this to the function app name in your local development environment
   JAVA_VERSION: '1.17.x'                      # set this to the java version to use
 
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout GitHub action'
@@ -38,6 +38,14 @@ jobs:
         with:
           name: function-zip
           path: target/funqy-azure-example.zip
+
+  deploy:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Download the zip
+        uses: actions/download-artifact@v3
+        with:
+          name: function-zip
 
       - name: Azure Login
         uses: azure/login@v1
