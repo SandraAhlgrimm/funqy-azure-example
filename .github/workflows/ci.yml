@@ -9,7 +9,7 @@ on:
     branches: [ main ]
 
 env:
-  AZURE_FUNCTIONAPP_NAME: quarkus-rg-functions-quarkus      # set this to your function app name on Azure
+  AZURE_FUNCTIONAPP_NAME: funqyhttptrigger      # set this to your function app name on Azure
   POM_XML_DIRECTORY: '.'                     # set this to the directory which contains pom.xml file
   POM_FUNCTIONAPP_NAME: funqy-azure-example        # set this to the function app name in your local development environment
   JAVA_VERSION: '1.17.x'                      # set this to the java version to use
