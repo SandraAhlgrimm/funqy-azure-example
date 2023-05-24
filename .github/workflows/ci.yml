@@ -33,6 +33,12 @@ jobs:
       - name: 'Build'
         run: ./mvnw clean package -DskipTests -Dnative
 
+      - name: Archive the function zip
+        uses: actions/upload-artifact@v3
+        with:
+          name: function-zip
+          path: /target/funqy-azure-example.zip
+
       - name: Azure Login
         uses: azure/login@v1
         with:
