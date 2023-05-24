@@ -5,8 +5,7 @@
       "type": "httpTrigger",
       "direction": "in",
       "methods": ["get", "post"],
-      "authLevel": "function",
-      "route": "api/FunqyHttpTrigger"
+      "authLevel": "function"
     },
     {
       "name": "res",
