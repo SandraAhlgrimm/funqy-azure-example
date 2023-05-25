@@ -53,8 +53,11 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      - name: Display structure of downloaded files
+        run: ls -R
+
       -  name: Deploy to Azure
          uses: Azure/functions-action@v1
          with:
             app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-            package: /home/runner/work/funqy-azure-example/funqy-azure-example/function-zip.zip
+            package: /home/runner/work/funqy-azure-example/funqy-azure-example/funqy-azure-example.zip
