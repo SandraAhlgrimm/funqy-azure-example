@@ -13,7 +13,7 @@ public class MyFunctionsTest {
     @Test
     public void testFun() {
         given()
-            .post("/fun")
+            .post("/FunqyHttpTrigger")
             .then()
             .statusCode(200)
             .body(containsString("Hello Funqy!"));
@@ -24,7 +24,7 @@ public class MyFunctionsTest {
         given()
             .contentType(ContentType.JSON)
             .body("{\"name\": \"Friend\"}")
-            .post("/fun")
+            .post("/FunqyHttpTrigger")
             .then()
             .statusCode(200)
             .body(containsString("Hello Friend!"));
