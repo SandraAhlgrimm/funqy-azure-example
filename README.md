@@ -108,3 +108,10 @@ az ad sp create-for-rbac --name "${SPNAME}" --role contributor --scopes "$RESOUR
 ```
 
 to generate a new service principal and get the credentials in JSON format.
+
+To deploy your Azure Functions locally with the zip deployment, you can use the following command:
+
+```bash
+az functionapp deployment source config-zip -g <resource_group> -n \
+<app_name> --src <zip_file_path>
+```
